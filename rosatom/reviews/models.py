@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+class Review(models.Model):
+    text = models.TextField()
+    rating = models.IntegerField()
+    positive = models.BooleanField()
+
+    def __str__(self):
+        return f'Grade: {self.rating}, {self.positive}'
