@@ -20,5 +20,6 @@ from reviews.views import index_page, review
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_page),
-    path('review/', review, name='review')
+    path('review/', review, name='review'),
+    path('index/', index_page, name='index')
 ]
